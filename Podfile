@@ -7,6 +7,15 @@ target 'CoolInstagram' do
 
   # Pods for CoolInstagram
 
+pod 'Appirater'
+
+# Firebase
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Crashlytics'
+pod 'Firebase/Storage'
+
   target 'CoolInstagramTests' do
     inherit! :search_paths
     # Pods for testing
