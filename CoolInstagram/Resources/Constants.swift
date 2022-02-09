@@ -12,5 +12,6 @@ struct Constants {
     
     struct viewLayout {
         static let cornerRadius: CGFloat = 8.0
+        static let padding: CGFloat = 8
     }
 }
