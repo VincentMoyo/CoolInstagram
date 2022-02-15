@@ -36,7 +36,7 @@ class ListViewController: UIViewController {
         view.addSubview(tableView)
         view.backgroundColor = .systemBackground
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
