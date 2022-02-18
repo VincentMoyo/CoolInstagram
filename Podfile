@@ -8,6 +8,7 @@ target 'CoolInstagram' do
   # Pods for CoolInstagram
 
 pod 'Appirater'
+pod 'SDWebImage'
 
 # Firebase
 pod 'Firebase/Core'
