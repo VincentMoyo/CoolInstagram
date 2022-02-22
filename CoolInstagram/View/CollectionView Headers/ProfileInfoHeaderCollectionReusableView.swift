@@ -22,32 +22,56 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
     
     private let profilePhotoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .red
+        imageView.image = UIImage(named: "test2")
         imageView.layer.masksToBounds = true
         return imageView
+    }()
+    
+    private let postLabel: UILabel = {
+        let label = UILabel()
+        label.text = "150"
+        label.textAlignment = .center
+        label.textColor = .label
+        label.numberOfLines = 1
+        return label
     }()
     
     private let postButton: UIButton = {
         let button = UIButton()
         button.setTitle("Posts", for: .normal)
         button.setTitleColor(.label, for: .normal)
-        button.backgroundColor = .secondarySystemBackground
         return button
+    }()
+    
+    private let followingLabel: UILabel = {
+        let label = UILabel()
+        label.text = "1 160"
+        label.textAlignment = .center
+        label.textColor = .label
+        label.numberOfLines = 1
+        return label
     }()
     
     private let followingButton: UIButton = {
         let button = UIButton()
         button.setTitle("Following", for: .normal)
         button.setTitleColor(.label, for: .normal)
-        button.backgroundColor = .secondarySystemBackground
         return button
+    }()
+    
+    private let followersLabel: UILabel = {
+        let label = UILabel()
+        label.text = "2 547"
+        label.textAlignment = .center
+        label.textColor = .label
+        label.numberOfLines = 1
+        return label
     }()
     
     private let followersButton: UIButton = {
         let button = UIButton()
         button.setTitle("Followers", for: .normal)
         button.setTitleColor(.label, for: .normal)
-        button.backgroundColor = .secondarySystemBackground
         return button
     }()
     
@@ -55,7 +79,9 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
         let button = UIButton()
         button.setTitle("Edit your profile", for: .normal)
         button.setTitleColor(.label, for: .normal)
-        button.backgroundColor = .secondarySystemBackground
+        button.layer.cornerRadius = 4
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.secondaryLabel.cgColor
         return button
     }()
     
@@ -69,9 +95,9 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
     
     private let bioLabel: UILabel = {
         let label = UILabel()
-        label.text = "Man city Caption"
+        label.text = "Man city Caption \nSoccer Player \nStriker \nNumber 10 t-shirt"
         label.textColor = .label
-        label.numberOfLines = 0 // line wrap
+        label.numberOfLines = 4
         return label
     }()
     
@@ -103,23 +129,38 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
         let buttonHeight = profilePhotoSize / 2
         let countButtonWidth = (width - 10 - profilePhotoSize) / 3
         
-        postButton.frame = CGRect(x: profilePhotoImageView.right,
+        postLabel.frame = CGRect(x: profilePhotoImageView.right,
                                   y: 5,
                                   width: countButtonWidth,
                                   height: buttonHeight).integral
         
-        followersButton.frame = CGRect(x: postButton.right,
+        postButton.frame = CGRect(x: profilePhotoImageView.right,
+                                  y: 30,
+                                  width: countButtonWidth,
+                                  height: buttonHeight).integral
+        
+        followersLabel.frame = CGRect(x: postButton.right,
                                        y: 5,
                                        width: countButtonWidth,
                                        height: buttonHeight).integral
         
+        followersButton.frame = CGRect(x: postButton.right,
+                                       y: 30,
+                                       width: countButtonWidth,
+                                       height: buttonHeight).integral
+        
+        followingLabel.frame = CGRect(x: followersButton.right,
+                                      y: 5,
+                                      width: countButtonWidth,
+                                      height: buttonHeight).integral
+        
         followingButton.frame = CGRect(x: followersButton.right,
-                                       y: 5,
+                                       y: 30,
                                        width: countButtonWidth,
                                        height: buttonHeight).integral
         
         editProfileButton.frame = CGRect(x: profilePhotoImageView.right,
-                                         y: 5 + buttonHeight,
+                                         y: 20 + buttonHeight,
                                          width: countButtonWidth * 3,
                                          height: buttonHeight).integral
         
@@ -139,8 +180,11 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
     private func addSubviews() {
         addSubview(profilePhotoImageView)
         addSubview(followersButton)
+        addSubview(followersLabel)
+        addSubview(followingLabel)
         addSubview(followingButton)
         addSubview(postButton)
+        addSubview(postLabel)
         addSubview(editProfileButton)
         addSubview(bioLabel)
         addSubview(nameLabel)

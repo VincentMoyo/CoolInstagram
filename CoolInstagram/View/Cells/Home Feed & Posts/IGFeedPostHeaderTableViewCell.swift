@@ -65,7 +65,7 @@ class IGFeedPostHeaderTableViewCell: UITableViewCell {
     
     public func configure(with model: User) {
         usernameLabel.text = model.username
-        profilePhotoImageView.image = UIImage(systemName: "person.circle")
+        profilePhotoImageView.image = UIImage(named: "test3")
         // profilePhotoImageView.sd_setImage(with: model.profilePhoto, completed: nil)
     }
     
