@@ -38,6 +38,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jna-eX-rPJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="27"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Jnb-Mj-ud3" kind="relationship" relationship="rootViewController" id="LFK-Qs-KHc"/>
@@ -55,6 +58,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="q1F-QJ-iwg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="27"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="27"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="JW0-Of-SXL" kind="relationship" relationship="rootViewController" id="mMI-4z-xS4"/>
@@ -72,6 +81,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rpT-Qx-96Q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="27"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="dbZ-58-YCl" kind="relationship" relationship="rootViewController" id="ezc-fl-ngA"/>
@@ -89,6 +101,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="615-y5-cr5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="27"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="W9z-2L-SWk" kind="relationship" relationship="rootViewController" id="Bui-Iu-IHI"/>
@@ -98,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="-1299" y="216"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Instagram-->
         <scene sceneID="Qxu-KY-YGO">
             <objects>
                 <viewController id="W9z-2L-SWk" customClass="HomeViewController" customModule="CoolInstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,7 +127,7 @@
                         <viewLayoutGuide key="safeArea" id="Uhp-ho-qpT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Rn0-MB-uma"/>
+                    <navigationItem key="navigationItem" title="Instagram" id="Rn0-MB-uma"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbO-NS-Nab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,6 +141,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iJ2-vR-fdh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="27"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="TUL-FL-e69" kind="relationship" relationship="rootViewController" id="UO7-No-6cG"/>
@@ -131,7 +153,7 @@
             </objects>
             <point key="canvasLocation" x="348" y="216"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Edit Profile-->
         <scene sceneID="S8s-7H-iX9">
             <objects>
                 <viewController id="JW0-Of-SXL" customClass="ProfileViewController" customModule="CoolInstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -141,7 +163,7 @@
                         <viewLayoutGuide key="safeArea" id="ifY-U5-4Zh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mng-dx-Osv"/>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="gc1-Xb-5Ze"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LxL-9o-Bak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +179,7 @@
                         <viewLayoutGuide key="safeArea" id="Qsh-qO-gfX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jxw-7m-8V1"/>
+                    <navigationItem key="navigationItem" id="TKq-V2-ryw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGg-Vj-RbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,7 +195,7 @@
                         <viewLayoutGuide key="safeArea" id="VDp-R1-S9U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5tY-ML-arV"/>
+                    <navigationItem key="navigationItem" id="kOs-nQ-8LO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPR-cO-U6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,7 +211,7 @@
                         <viewLayoutGuide key="safeArea" id="erc-vI-eps"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OoX-w7-77r"/>
+                    <navigationItem key="navigationItem" id="AdB-zl-esz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0D-gs-os7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

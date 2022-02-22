@@ -111,19 +111,19 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = renderModels[indexPath.section]
         switch model.renderType {
-        case .actions(let actions) :
+        case .actions(_) :
             let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostActionsTableViewCell.identifier, for: indexPath) as? IGFeedPostActionsTableViewCell
             
             return cell ?? UITableViewCell()
-        case .comments(let comments) :
+        case .comments(_) :
             let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostGeneralTableViewCell.identifier, for: indexPath) as? IGFeedPostGeneralTableViewCell
             
             return cell ?? UITableViewCell()
-        case .header(let header) :
+        case .header(_) :
             let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostHeaderTableViewCell.identifier, for: indexPath) as? IGFeedPostHeaderTableViewCell
             
             return cell ?? UITableViewCell()
-        case .primaryContent(let post) :
+        case .primaryContent(_) :
             let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostTableViewCell.identifier, for: indexPath) as? IGFeedPostTableViewCell
             
             return cell ?? UITableViewCell()

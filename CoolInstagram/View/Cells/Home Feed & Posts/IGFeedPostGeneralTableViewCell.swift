@@ -12,10 +12,17 @@ class IGFeedPostGeneralTableViewCell: UITableViewCell {
     
     static let identifier = "IGFeedPostGeneralTableViewCell"
     
+    private let commentLabel: UILabel = {
+        let label = UILabel()
+        label.text = "   Go Citizens!"
+        label.textColor = .label
+        label.numberOfLines = 1
+        return label
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        contentView.backgroundColor = .systemOrange
+        contentView.addSubview(commentLabel)
     }
     
     required init?(coder: NSCoder) {
@@ -29,6 +36,6 @@ class IGFeedPostGeneralTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        
+        commentLabel.frame = contentView.bounds
     }
 }

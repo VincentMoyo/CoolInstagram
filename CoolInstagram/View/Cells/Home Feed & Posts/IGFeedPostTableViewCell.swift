@@ -35,18 +35,20 @@ final class IGFeedPostTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(with post: UserPost) {
-        postImageView.image = UIImage(named: "test")
+    public func configure(with post: UserPost, number num: Int) {
+        print("wrjhwrghwshnw \(num)")
+        postImageView.image = UIImage(named: "test\(num)")
         return
-        switch post.postType {
-        case .video:
-            player = AVPlayer(url: post.postURL)
-            playerLayer.player = player
-            playerLayer.player?.volume = 0
-            playerLayer.player?.play()
-        case .photo:
-            postImageView.sd_setImage(with: post.postURL, completed: nil)
-        }
+//        switch post.postType {
+//        case .video:
+//            player = AVPlayer(url: post.postURL)
+//            playerLayer.player = player
+//            playerLayer.player?.volume = 0
+//            playerLayer.player?.play()
+//        case .photo:
+//            postImageView.sd_setImage(with: post.postURL, completed: nil)
+//        }
+        
     }
     
     override func layoutSubviews() {

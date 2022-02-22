@@ -18,6 +18,7 @@ struct HomeFeedRenderViewModel {
 class HomeViewController: UIViewController {
     
     private var feedRenderModels = [HomeFeedRenderViewModel]()
+    private var counter = 0
     
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -71,7 +72,7 @@ class HomeViewController: UIViewController {
                                         createdDate: Date(),
                                         likes: []))
         }
-        for x in 0..<5 {
+        for _ in 0..<5 {
             let viewModel = HomeFeedRenderViewModel(header: PostRenderPhotoViewModel(renderType: .header(provider: user)),
                                                     post: PostRenderPhotoViewModel(renderType: .primaryContent(provider: post)),
                                                     actions: PostRenderPhotoViewModel(renderType: .actions(provider: "")),
@@ -133,9 +134,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             // comments
             let commentsModel = model.comments
             switch commentsModel.renderType {
-            case .comments(let comments): return comments.count > 2 ? 2 : comments.count
+            case .comments(_): return 1
             case.header, .actions, .primaryContent: return 0
-            @unknown default: fatalError("Invalid case")
             }
         }
         return 0
@@ -171,7 +171,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             case.header, .actions, .comments: return UITableViewCell()
             case .primaryContent(provider: let provider):
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostTableViewCell.identifier, for: indexPath) as? IGFeedPostTableViewCell
-                cell?.configure(with: provider)
+                counter += 1
+                cell?.configure(with: provider, number: counter)
                 return cell ?? UITableViewCell()
             }
         } else if subSection == 2 {
@@ -180,7 +181,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             switch actionModel.renderType {
                 
             case.header, .primaryContent, .comments: return UITableViewCell()
-            case .actions(provider: let provider):
+            case .actions(_):
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostActionsTableViewCell.identifier, for: indexPath) as? IGFeedPostActionsTableViewCell
                 cell?.delegate = self
                 return cell ?? UITableViewCell()
@@ -190,7 +191,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let commentModel = model.comments
             switch commentModel.renderType {
             case.header, .actions, .primaryContent: return UITableViewCell()
-            case .comments(comments: let comments):
+            case .comments(_):
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostGeneralTableViewCell.identifier, for: indexPath) as? IGFeedPostGeneralTableViewCell
                 
                 return cell ?? UITableViewCell()

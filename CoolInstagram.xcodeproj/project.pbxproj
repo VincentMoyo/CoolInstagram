@@ -321,8 +321,8 @@
 			children = (
 				78C0CB2227A92A910089E3B3 /* HomeViewController.swift */,
 				78C0CB5327A92D0A0089E3B3 /* ExploreViewController.swift */,
-				78C0CB5927A92D410089E3B3 /* ProfileViewController.swift */,
 				78C0CB5727A92D360089E3B3 /* NotificationsViewController.swift */,
+				78C0CB5927A92D410089E3B3 /* ProfileViewController.swift */,
 				78C0CB5527A92D260089E3B3 /* CameraViewController.swift */,
 			);
 			path = "Core Pages";
